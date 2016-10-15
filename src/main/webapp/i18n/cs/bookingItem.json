@@ -1,0 +1,27 @@
+{
+    "test3App": {
+        "bookingItem" : {
+            "home": {
+                "title": "Booking Items",
+                "createLabel": "Vytvořit Booking Item",
+                "createOrEditLabel": "Vytvořit nebo upravit Booking Item",
+                "search": "Vyhledat Booking Item"
+            },
+            "created": "Byl vytvořen potomek entity Booking Item s identifikátorem {{ param }}",
+            "updated": "Potomek entity Booking Item s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Booking Item s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Booking Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Booking Item"
+            },
+            "price": "Price",
+            "serviceType": "Service Type",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "customer": "Customer",
+            "resource": "Resource"
+        }
+    }
+}

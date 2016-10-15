@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://127.0.0.1:8080/#/ -->
+<html class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test3</title>
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css content/css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="./Test3_files/loading-bar.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="./Test3_files/vendor.css">
+    <!-- endbuild -->
+    <!-- build:css content/css/main.css -->
+    <link rel="stylesheet" href="./Test3_files/main.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="test3App" ng-strict-di="" class="ng-scope">
+    <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="ribbon dev"><a href="http://127.0.0.1:8080/" translate="global.ribbon.dev" class="ng-scope ng-binding">Development</a></div>
+    <!-- uiView: navbar --><div ui-view="navbar" class="ng-scope"><nav class="navbar navbar-default ng-scope" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-click="vm.toggleNavbar()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="http://127.0.0.1:8080/#/" ng-click="vm.collapseNavbar()">
+                <img class="logo-img" src="./Test3_files/logo-jhipster.png">
+                <span data-translate="global.title" class="ng-scope">Test3</span> <span class="navbar-version ng-binding">v0.0.1-SNAPSHOT</span>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()" style="height: 0px;">
+            <ul class="nav navbar-nav navbar-right">
+                <li ui-sref-active="active" class="active">
+                    <a ui-sref="home" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <span class="hidden-sm ng-scope" data-translate="global.menu.home">Home</span>
+                    </a>
+                </li>
+                <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
+                <!-- ngSwitchWhen: true --><li ng-class="{active: vm.$state.includes(&#39;entity&#39;)}" ng-switch-when="true" uib-dropdown="" class="dropdown pointer ng-scope">
+                    <a class="dropdown-toggle" uib-dropdown-toggle="" href="http://127.0.0.1:8080/" id="entity-menu" aria-haspopup="true" aria-expanded="false">
+                        <span>
+                            <span class="glyphicon glyphicon-th-list"></span>
+                            <span class="hidden-sm ng-scope" data-translate="global.menu.entities.main">Entities</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <li ui-sref-active="active">
+                            <a ui-sref="resource" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/resource">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.resource" class="ng-scope">Resource</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="holiday" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/holiday">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.holiday" class="ng-scope">Holiday</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="offer" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/offer">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.offer" class="ng-scope">Offer</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="merchant" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/merchant">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.merchant" class="ng-scope">Merchant</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="employee" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/employee">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.employee" class="ng-scope">Employee</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="booking-item" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/booking-item">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.bookingItem" class="ng-scope">Booking Item</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="service" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/service">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.service" class="ng-scope">Service</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="customer" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/customer">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.customer" class="ng-scope">Customer</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="review" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/review">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.review" class="ng-scope">Review</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="photo" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/photo">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.photo" class="ng-scope">Photo</span>
+                            </a>
+                        </li>
+                        <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+                    </ul>
+                </li><!-- end ngSwitchWhen: -->
+                <li ng-class="{active: vm.$state.includes(&#39;account&#39;)}" uib-dropdown="" class="dropdown pointer">
+                    <a class="dropdown-toggle" uib-dropdown-toggle="" href="http://127.0.0.1:8080/" id="account-menu" aria-haspopup="true" aria-expanded="false">
+                        <span>
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="hidden-sm ng-scope" data-translate="global.menu.account.main">Account</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope">
+                            <a ui-sref="settings" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/settings">
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
+                                <span data-translate="global.menu.account.settings" class="ng-scope">Settings</span>
+                            </a>
+                        </li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope">
+                            <a ui-sref="password" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/password">
+                                <span class="glyphicon glyphicon-lock"></span>&nbsp;
+                                <span data-translate="global.menu.account.password" class="ng-scope">Password</span>
+                            </a>
+                        </li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope">
+                            <a ui-sref="sessions" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/sessions">
+                                <span class="glyphicon glyphicon-cloud"></span>&nbsp;
+                                <span data-translate="global.menu.account.sessions" class="ng-scope">Sessions</span>
+                            </a>
+                        </li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: true --><li ui-sref-active="active" ng-switch-when="true" class="ng-scope">
+                            <a href="http://127.0.0.1:8080/" ng-click="vm.logout()" id="logout">
+                                <span class="glyphicon glyphicon-log-out"></span>&nbsp;
+                                <span data-translate="global.menu.account.logout" class="ng-scope">Sign out</span>
+                            </a>
+                        </li><!-- end ngSwitchWhen: -->
+                        <!-- ngSwitchWhen: false -->
+                        <!-- ngSwitchWhen: false -->
+                    </ul>
+                </li>
+                <!-- ngSwitchWhen: true --><li ng-class="{active: vm.$state.includes(&#39;admin&#39;)}" ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown="" class="dropdown pointer ng-scope hidden">
+                    <a class="dropdown-toggle" uib-dropdown-toggle="" href="http://127.0.0.1:8080/" id="admin-menu" aria-haspopup="true" aria-expanded="false">
+                        <span>
+                            <span class="glyphicon glyphicon-tower"></span>
+                            <span class="hidden-sm ng-scope" data-translate="global.menu.admin.main">Administration</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu" uib-dropdown-menu="">
+                        <li ui-sref-active="active">
+                            <a ui-sref="user-management" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/user-management">
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;
+                                <span data-translate="global.menu.admin.userManagement" class="ng-scope">User management</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="jhi-tracker" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/tracker">
+                                <span class="glyphicon glyphicon-eye-open"></span>&nbsp;
+                                <span data-translate="global.menu.admin.tracker" class="ng-scope">User tracker</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="jhi-metrics" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/metrics">
+                                <span class="glyphicon glyphicon-dashboard"></span>&nbsp;
+                                <span data-translate="global.menu.admin.metrics" class="ng-scope">Metrics</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="jhi-health" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/health">
+                                <span class="glyphicon glyphicon-heart"></span>&nbsp;
+                                <span data-translate="global.menu.admin.health" class="ng-scope">Health</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="jhi-configuration" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/configuration">
+                                <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
+                                <span data-translate="global.menu.admin.configuration" class="ng-scope">Configuration</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="audits" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/audits">
+                                <span class="glyphicon glyphicon-bell"></span>&nbsp;
+                                <span data-translate="global.menu.admin.audits" class="ng-scope">Audits</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="logs" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/logs">
+                                <span class="glyphicon glyphicon-tasks"></span>&nbsp;
+                                <span data-translate="global.menu.admin.logs" class="ng-scope">Logs</span>
+                            </a>
+                        </li>
+                        <li ng-show="vm.swaggerEnabled" ui-sref-active="active" aria-hidden="false">
+                            <a ui-sref="docs" ng-click="vm.collapseNavbar()" href="http://127.0.0.1:8080/#/docs">
+                                <span class="glyphicon glyphicon-book"></span>&nbsp;
+                                <span data-translate="global.menu.admin.apidocs" class="ng-scope">API</span>
+                            </a>
+                        </li>
+                        <!-- jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here -->
+                    </ul>
+                </li><!-- end ngSwitchWhen: -->
+                <li ui-sref-active="active" uib-dropdown="" class="dropdown pointer ng-scope" ng-controller="JhiLanguageController as languageVm">
+                    <!-- ngIf: languageVm.languages.length > 1 --><a class="dropdown-toggle ng-scope" uib-dropdown-toggle="" href="http://127.0.0.1:8080/" ng-if="languageVm.languages.length &gt; 1" aria-haspopup="true" aria-expanded="false">
+                        <span>
+                            <span class="glyphicon glyphicon-flag"></span>
+                            <span class="hidden-sm ng-scope" data-translate="global.menu.language">Language</span>
+                            <b class="caret"></b>
+                        </span>
+                    </a><!-- end ngIf: languageVm.languages.length > 1 -->
+                    <!-- ngIf: languageVm.languages.length > 1 --><ul class="dropdown-menu ng-scope" uib-dropdown-menu="" ng-if="languageVm.languages.length &gt; 1">
+                        <!-- ngRepeat: language in languageVm.languages --><li active-menu="en" ng-repeat="language in languageVm.languages" class="ng-scope active">
+                            <a href="http://127.0.0.1:8080/" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();" class="ng-binding">English</a>
+                        </li><!-- end ngRepeat: language in languageVm.languages --><li active-menu="cs" ng-repeat="language in languageVm.languages" class="ng-scope">
+                            <a href="http://127.0.0.1:8080/" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();" class="ng-binding">Český</a>
+                        </li><!-- end ngRepeat: language in languageVm.languages -->
+                    </ul><!-- end ngIf: languageVm.languages.length > 1 -->
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+    <div class="container">
+        <!-- uiView: content --><div class="well ng-scope" ui-view="content"><div class="ng-scope">
+    <div class="row">
+        <div class="col-md-4">
+            <span class="hipster img-responsive img-rounded"></span>
+        </div>
+        <div class="col-md-8">
+            <h1 data-translate="home.title" class="ng-scope"><b>A cloud based booking platform, that promotes service improvement and integration, for all businesses and individuals!!</b></h1>
+            <p class="lead ng-scope" data-translate="home.subtitle">We provide an intelligent booking, customer, sales and integration management system that can be tailored for any sector.</p>
+
+            <div ng-switch="vm.isAuthenticated()">
+                <!-- ngSwitchWhen: true --><div class="alert alert-success ng-scope ng-binding" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: &#39;user&#39;}">You are logged in as "user". Everyone at <b>Platform8</b> wish you a Great day!! If you have any questions dont hesitate to get in touch</div><!-- end ngSwitchWhen: -->
+
+                <!-- ngSwitchWhen: false -->
+
+                <!-- ngSwitchWhen: false -->
+            </div>
+
+            <p data-translate="home.question" class="ng-scope">If you would like to see any of our Social Media then see the below</p>
+
+            <ul>
+                <li><a href="http://127.0.0.1:8080/" target="_blank" data-translate="home.link.homepage" class="ng-scope">Platform8 on Facebook</a></li>
+                <li><a href="https://twitter.com/java_hipster" target="_blank" data-translate="home.link.follow" class="ng-scope">follow @java_hipster on Twitter</a></li>
+            </ul>
+
+            <p>
+             <span data-translate="home.like" class="ng-scope">If you like JHipster, don't forget to give us a star on</span>&nbsp;<a href="https://github.com/jhipster/generator-jhipster" target="_blank" data-translate="home.github" class="ng-scope">GitHub</a>!
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+
+        <div class="footer">
+            <p data-translate="footer" class="ng-scope">This is your footer</p>
+        </div>
+    </div>
+
+    <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>-->
+
+    <!-- build:js app/vendor.js -->
+    <!-- bower:js -->
+    <script src="./Test3_files/jquery.js.download"></script>
+    <script src="./Test3_files/messageformat.js.download"></script>
+    <script src="./Test3_files/json3.js.download"></script>
+    <script src="./Test3_files/sockjs.js.download"></script>
+    <script src="./Test3_files/stomp.min.js.download"></script>
+    <script src="./Test3_files/angular.js.download"></script>
+    <script src="./Test3_files/angular-aria.js.download"></script>
+    <script src="./Test3_files/ui-bootstrap-tpls.js.download"></script>
+    <script src="./Test3_files/angular-cache-buster.js.download"></script>
+    <script src="./Test3_files/angular-cookies.js.download"></script>
+    <script src="./Test3_files/tmhDynamicLocale.js.download"></script>
+    <script src="./Test3_files/ngStorage.js.download"></script>
+    <script src="./Test3_files/loading-bar.js.download"></script>
+    <script src="./Test3_files/angular-resource.js.download"></script>
+    <script src="./Test3_files/angular-sanitize.js.download"></script>
+    <script src="./Test3_files/angular-translate.js.download"></script>
+    <script src="./Test3_files/angular-translate-interpolation-messageformat.js.download"></script>
+    <script src="./Test3_files/angular-translate-loader-partial.js.download"></script>
+    <script src="./Test3_files/angular-translate-storage-cookie.js.download"></script>
+    <script src="./Test3_files/angular-ui-router.js.download"></script>
+    <script src="./Test3_files/datetime-picker.js.download"></script>
+    <script src="./Test3_files/ng-file-upload.js.download"></script>
+    <script src="./Test3_files/ng-infinite-scroll.js.download"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:js app/app.js  -->
+    <!-- inject:js -->
+    <script src="./Test3_files/app.module.js.download"></script>
+    <script src="./Test3_files/user.service.js.download"></script>
+    <script src="./Test3_files/profile.service.js.download"></script>
+    <script src="./Test3_files/page-ribbon.directive.js.download"></script>
+    <script src="./Test3_files/sessions.service.js.download"></script>
+    <script src="./Test3_files/register.service.js.download"></script>
+    <script src="./Test3_files/principal.service.js.download"></script>
+    <script src="./Test3_files/password-reset-init.service.js.download"></script>
+    <script src="./Test3_files/password-reset-finish.service.js.download"></script>
+    <script src="./Test3_files/password.service.js.download"></script>
+    <script src="./Test3_files/has-authority.directive.js.download"></script>
+    <script src="./Test3_files/has-any-authority.directive.js.download"></script>
+    <script src="./Test3_files/auth.session.service.js.download"></script>
+    <script src="./Test3_files/auth.service.js.download"></script>
+    <script src="./Test3_files/activate.service.js.download"></script>
+    <script src="./Test3_files/account.service.js.download"></script>
+    <script src="./Test3_files/navbar.controller.js.download"></script>
+    <script src="./Test3_files/active-menu.directive.js.download"></script>
+    <script src="./Test3_files/active-link.directive.js.download"></script>
+    <script src="./Test3_files/error.state.js.download"></script>
+    <script src="./Test3_files/home.state.js.download"></script>
+    <script src="./Test3_files/home.controller.js.download"></script>
+    <script src="./Test3_files/service-dialog.controller.js.download"></script>
+    <script src="./Test3_files/service-detail.controller.js.download"></script>
+    <script src="./Test3_files/service-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/service.state.js.download"></script>
+    <script src="./Test3_files/service.service.js.download"></script>
+    <script src="./Test3_files/service.search.service.js.download"></script>
+    <script src="./Test3_files/service.controller.js.download"></script>
+    <script src="./Test3_files/review-dialog.controller.js.download"></script>
+    <script src="./Test3_files/review-detail.controller.js.download"></script>
+    <script src="./Test3_files/review-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/review.state.js.download"></script>
+    <script src="./Test3_files/review.service.js.download"></script>
+    <script src="./Test3_files/review.search.service.js.download"></script>
+    <script src="./Test3_files/review.controller.js.download"></script>
+    <script src="./Test3_files/resource-dialog.controller.js.download"></script>
+    <script src="./Test3_files/resource-detail.controller.js.download"></script>
+    <script src="./Test3_files/resource-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/resource.state.js.download"></script>
+    <script src="./Test3_files/resource.service.js.download"></script>
+    <script src="./Test3_files/resource.search.service.js.download"></script>
+    <script src="./Test3_files/resource.controller.js.download"></script>
+    <script src="./Test3_files/photo-dialog.controller.js.download"></script>
+    <script src="./Test3_files/photo-detail.controller.js.download"></script>
+    <script src="./Test3_files/photo-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/photo.state.js.download"></script>
+    <script src="./Test3_files/photo.service.js.download"></script>
+    <script src="./Test3_files/photo.search.service.js.download"></script>
+    <script src="./Test3_files/photo.controller.js.download"></script>
+    <script src="./Test3_files/offer-dialog.controller.js.download"></script>
+    <script src="./Test3_files/offer-detail.controller.js.download"></script>
+    <script src="./Test3_files/offer-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/offer.state.js.download"></script>
+    <script src="./Test3_files/offer.service.js.download"></script>
+    <script src="./Test3_files/offer.search.service.js.download"></script>
+    <script src="./Test3_files/offer.controller.js.download"></script>
+    <script src="./Test3_files/merchant-dialog.controller.js.download"></script>
+    <script src="./Test3_files/merchant-detail.controller.js.download"></script>
+    <script src="./Test3_files/merchant-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/merchant.state.js.download"></script>
+    <script src="./Test3_files/merchant.service.js.download"></script>
+    <script src="./Test3_files/merchant.search.service.js.download"></script>
+    <script src="./Test3_files/merchant.controller.js.download"></script>
+    <script src="./Test3_files/holiday-dialog.controller.js.download"></script>
+    <script src="./Test3_files/holiday-detail.controller.js.download"></script>
+    <script src="./Test3_files/holiday-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/holiday.state.js.download"></script>
+    <script src="./Test3_files/holiday.service.js.download"></script>
+    <script src="./Test3_files/holiday.search.service.js.download"></script>
+    <script src="./Test3_files/holiday.controller.js.download"></script>
+    <script src="./Test3_files/entity.state.js.download"></script>
+    <script src="./Test3_files/employee-dialog.controller.js.download"></script>
+    <script src="./Test3_files/employee-detail.controller.js.download"></script>
+    <script src="./Test3_files/employee-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/employee.state.js.download"></script>
+    <script src="./Test3_files/employee.service.js.download"></script>
+    <script src="./Test3_files/employee.search.service.js.download"></script>
+    <script src="./Test3_files/employee.controller.js.download"></script>
+    <script src="./Test3_files/customer-dialog.controller.js.download"></script>
+    <script src="./Test3_files/customer-detail.controller.js.download"></script>
+    <script src="./Test3_files/customer-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/customer.state.js.download"></script>
+    <script src="./Test3_files/customer.service.js.download"></script>
+    <script src="./Test3_files/customer.search.service.js.download"></script>
+    <script src="./Test3_files/customer.controller.js.download"></script>
+    <script src="./Test3_files/booking-item-dialog.controller.js.download"></script>
+    <script src="./Test3_files/booking-item-detail.controller.js.download"></script>
+    <script src="./Test3_files/booking-item-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/booking-item.state.js.download"></script>
+    <script src="./Test3_files/booking-item.service.js.download"></script>
+    <script src="./Test3_files/booking-item.search.service.js.download"></script>
+    <script src="./Test3_files/booking-item.controller.js.download"></script>
+    <script src="./Test3_files/truncate-words.filter.js.download"></script>
+    <script src="./Test3_files/truncate-characters.filter.js.download"></script>
+    <script src="./Test3_files/sort-by.directive.js.download"></script>
+    <script src="./Test3_files/sort.directive.js.download"></script>
+    <script src="./Test3_files/parse-links.service.js.download"></script>
+    <script src="./Test3_files/pagination-util.service.js.download"></script>
+    <script src="./Test3_files/jhi-item-count.directive.js.download"></script>
+    <script src="./Test3_files/date-util.service.js.download"></script>
+    <script src="./Test3_files/data-util.service.js.download"></script>
+    <script src="./Test3_files/capitalize.filter.js.download"></script>
+    <script src="./Test3_files/base64.service.js.download"></script>
+    <script src="./Test3_files/login.service.js.download"></script>
+    <script src="./Test3_files/login.controller.js.download"></script>
+    <script src="./Test3_files/language.service.js.download"></script>
+    <script src="./Test3_files/language.filter.js.download"></script>
+    <script src="./Test3_files/language.controller.js.download"></script>
+    <script src="./Test3_files/language.constants.js.download"></script>
+    <script src="./Test3_files/show-validation.directive.js.download"></script>
+    <script src="./Test3_files/pagination.constants.js.download"></script>
+    <script src="./Test3_files/minbytes.directive.js.download"></script>
+    <script src="./Test3_files/maxbytes.directive.js.download"></script>
+    <script src="./Test3_files/alert-error.directive.js.download"></script>
+    <script src="./Test3_files/alert.service.js.download"></script>
+    <script src="./Test3_files/alert.directive.js.download"></script>
+    <script src="./Test3_files/notification.interceptor.js.download"></script>
+    <script src="./Test3_files/errorhandler.interceptor.js.download"></script>
+    <script src="./Test3_files/auth-expired.interceptor.js.download"></script>
+    <script src="./Test3_files/translation.handler.js.download"></script>
+    <script src="./Test3_files/state.handler.js.download"></script>
+    <script src="./Test3_files/uib-pagination.config.js.download"></script>
+    <script src="./Test3_files/uib-pager.config.js.download"></script>
+    <script src="./Test3_files/translation-storage.provider.js.download"></script>
+    <script src="./Test3_files/translation.config.js.download"></script>
+    <script src="./Test3_files/localstorage.config.js.download"></script>
+    <script src="./Test3_files/http.config.js.download"></script>
+    <script src="./Test3_files/compile.config.js.download"></script>
+    <script src="./Test3_files/alert.config.js.download"></script>
+    <script src="./Test3_files/app.state.js.download"></script>
+    <script src="./Test3_files/app.constants.js.download"></script>
+    <script src="./Test3_files/user-management-dialog.controller.js.download"></script>
+    <script src="./Test3_files/user-management-detail.controller.js.download"></script>
+    <script src="./Test3_files/user-management-delete-dialog.controller.js.download"></script>
+    <script src="./Test3_files/user-management.state.js.download"></script>
+    <script src="./Test3_files/user-management.controller.js.download"></script>
+    <script src="./Test3_files/tracker.state.js.download"></script>
+    <script src="./Test3_files/tracker.service.js.download"></script>
+    <script src="./Test3_files/tracker.controller.js.download"></script>
+    <script src="./Test3_files/metrics.state.js.download"></script>
+    <script src="./Test3_files/metrics.service.js.download"></script>
+    <script src="./Test3_files/metrics.modal.controller.js.download"></script>
+    <script src="./Test3_files/metrics.controller.js.download"></script>
+    <script src="./Test3_files/logs.state.js.download"></script>
+    <script src="./Test3_files/logs.service.js.download"></script>
+    <script src="./Test3_files/logs.controller.js.download"></script>
+    <script src="./Test3_files/health.state.js.download"></script>
+    <script src="./Test3_files/health.service.js.download"></script>
+    <script src="./Test3_files/health.modal.controller.js.download"></script>
+    <script src="./Test3_files/health.controller.js.download"></script>
+    <script src="./Test3_files/docs.state.js.download"></script>
+    <script src="./Test3_files/configuration.state.js.download"></script>
+    <script src="./Test3_files/configuration.service.js.download"></script>
+    <script src="./Test3_files/configuration.controller.js.download"></script>
+    <script src="./Test3_files/audits.state.js.download"></script>
+    <script src="./Test3_files/audits.service.js.download"></script>
+    <script src="./Test3_files/audits.controller.js.download"></script>
+    <script src="./Test3_files/admin.state.js.download"></script>
+    <script src="./Test3_files/social-register.controller.js.download"></script>
+    <script src="./Test3_files/social.state.js.download"></script>
+    <script src="./Test3_files/social.service.js.download"></script>
+    <script src="./Test3_files/social.directive.js.download"></script>
+    <script src="./Test3_files/settings.state.js.download"></script>
+    <script src="./Test3_files/settings.controller.js.download"></script>
+    <script src="./Test3_files/sessions.state.js.download"></script>
+    <script src="./Test3_files/sessions.controller.js.download"></script>
+    <script src="./Test3_files/reset.request.state.js.download"></script>
+    <script src="./Test3_files/reset.request.controller.js.download"></script>
+    <script src="./Test3_files/reset.finish.state.js.download"></script>
+    <script src="./Test3_files/reset.finish.controller.js.download"></script>
+    <script src="./Test3_files/register.state.js.download"></script>
+    <script src="./Test3_files/register.controller.js.download"></script>
+    <script src="./Test3_files/password-strength-bar.directive.js.download"></script>
+    <script src="./Test3_files/password.state.js.download"></script>
+    <script src="./Test3_files/password.controller.js.download"></script>
+    <script src="./Test3_files/activate.state.js.download"></script>
+    <script src="./Test3_files/activate.controller.js.download"></script>
+    <script src="./Test3_files/account.state.js.download"></script>
+    <!-- endinject -->
+    <!-- endbuild -->
+
+
+
+</body></html>

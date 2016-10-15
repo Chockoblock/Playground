@@ -1,0 +1,178 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myServiceLabel" data-translate="test3App.service.home.createOrEditLabel">Create or edit a Service</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.service.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.service.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.mondayIsOpen" for="field_mondayIsOpen">Monday Is Open</label>
+            <input type="checkbox" class="form-control" name="mondayIsOpen" id="field_mondayIsOpen"
+                    ng-model="vm.service.mondayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.tuesdayIsOpen" for="field_tuesdayIsOpen">Tuesday Is Open</label>
+            <input type="checkbox" class="form-control" name="tuesdayIsOpen" id="field_tuesdayIsOpen"
+                    ng-model="vm.service.tuesdayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.wednesdayIsOpen" for="field_wednesdayIsOpen">Wednesday Is Open</label>
+            <input type="checkbox" class="form-control" name="wednesdayIsOpen" id="field_wednesdayIsOpen"
+                    ng-model="vm.service.wednesdayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.thursdayIsOpen" for="field_thursdayIsOpen">Thursday Is Open</label>
+            <input type="checkbox" class="form-control" name="thursdayIsOpen" id="field_thursdayIsOpen"
+                    ng-model="vm.service.thursdayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.fridayIsOpen" for="field_fridayIsOpen">Friday Is Open</label>
+            <input type="checkbox" class="form-control" name="fridayIsOpen" id="field_fridayIsOpen"
+                    ng-model="vm.service.fridayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.saturdayIsOpen" for="field_saturdayIsOpen">Saturday Is Open</label>
+            <input type="checkbox" class="form-control" name="saturdayIsOpen" id="field_saturdayIsOpen"
+                    ng-model="vm.service.saturdayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.sundayIsOpen" for="field_sundayIsOpen">Sunday Is Open</label>
+            <input type="checkbox" class="form-control" name="sundayIsOpen" id="field_sundayIsOpen"
+                    ng-model="vm.service.sundayIsOpen"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.service.name"
+                    required ng-minlength="2" ng-maxlength="20" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.service.description"
+                    required ng-minlength="2" ng-maxlength="256" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="256">
+                    This field cannot be longer than 256 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.serviceType" for="field_serviceType">Service Type</label>
+            <input type="text" class="form-control" name="serviceType" id="field_serviceType"
+                    ng-model="vm.service.serviceType"
+                    required ng-minlength="2" ng-maxlength="20" />
+            <div ng-show="editForm.serviceType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.serviceType.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.serviceType.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.serviceType.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.startTime" for="field_startTime">Start Time</label>
+                <div class="input-group">
+                    <input id="field_startTime" type="text" class="form-control" name="startTime" datetime-picker="{{dateformat}}" ng-model="vm.service.startTime" is-open="vm.datePickerOpenStatus.startTime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.startTime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.startTime.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.startTime.$error.ZonedDateTimelocal" data-translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.service.endTime" for="field_endTime">End Time</label>
+                <div class="input-group">
+                    <input id="field_endTime" type="text" class="form-control" name="endTime" datetime-picker="{{dateformat}}" ng-model="vm.service.endTime" is-open="vm.datePickerOpenStatus.endTime"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.endTime.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.endTime.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.endTime.$error.ZonedDateTimelocal" data-translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="test3App.service.merchant" for="field_merchant">Merchant</label>
+            <select class="form-control" id="field_merchant" name="merchant" ng-model="vm.service.merchant" ng-options="merchant as merchant.name for merchant in vm.merchants track by merchant.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="test3App.service.holiday" for="field_holiday">Holiday</label>
+            <select class="form-control" id="field_holiday" multiple name="holiday" ng-model="vm.service.holidays" ng-options="holiday as holiday.id for holiday in vm.holidays track by holiday.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

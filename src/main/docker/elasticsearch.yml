@@ -1,0 +1,10 @@
+version: '2'
+services:
+    test3-elasticsearch:
+        container_name: test3-elasticsearch
+        image: elasticsearch:2.4.0
+        # volumes:
+        #     - ~/volumes/jhipster/test3/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300

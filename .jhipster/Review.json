@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "photo",
+            "otherEntityName": "photo",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "review"
+        },
+        {
+            "relationshipName": "merchant",
+            "otherEntityName": "merchant",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipName": "customer",
+            "otherEntityName": "customer",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "review",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rating",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20161012120258",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "review",
+    "pagination": "no"
+}

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="Martin (generated)" id="1476288481612-1">
+      <createTable tableName="customer">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="customerPK"/>
+         </column>
+         <column name="contact_number" type="VARCHAR(255)"/>
+         <column name="first_line_of_address" type="VARCHAR(255)"/>
+         <column name="postcode" type="VARCHAR(255)"/>
+         <column name="second_line_of_address" type="VARCHAR(255)"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-2">
+      <createTable tableName="employee">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="employeePK"/>
+         </column>
+         <column name="email" type="VARCHAR(255)"/>
+         <column name="first_name" type="VARCHAR(255)"/>
+         <column name="last_name" type="VARCHAR(255)"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-3">
+      <createTable tableName="holiday">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="holidayPK"/>
+         </column>
+         <column name="end_time" type="datetime"/>
+         <column name="name" type="VARCHAR(255)"/>
+         <column name="start_time" type="datetime"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-4">
+      <createTable tableName="jhi_authority">
+         <column name="name" type="VARCHAR(50)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-5">
+      <createTable tableName="jhi_persistent_audit_event">
+         <column autoIncrement="true" name="event_id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="jhi_persistent_audit_eventPK"/>
+         </column>
+         <column name="event_date" type="datetime"/>
+         <column name="event_type" type="VARCHAR(255)"/>
+         <column name="principal" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-6">
+      <createTable tableName="jhi_persistent_audit_evt_data">
+         <column name="event_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="value" type="VARCHAR(255)"/>
+         <column name="name" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-7">
+      <createTable tableName="jhi_persistent_token">
+         <column name="series" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="ip_address" type="VARCHAR(39)"/>
+         <column name="token_date" type="date"/>
+         <column name="token_value" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="user_agent" type="VARCHAR(255)"/>
+         <column name="user_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-8">
+      <createTable tableName="jhi_social_user_connection">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="jhi_social_user_connectionPK"/>
+         </column>
+         <column name="access_token" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="display_name" type="VARCHAR(255)"/>
+         <column name="expire_time" type="BIGINT"/>
+         <column name="image_url" type="VARCHAR(255)"/>
+         <column name="profile_url" type="VARCHAR(255)"/>
+         <column name="provider_id" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="provider_user_id" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="rank" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="refresh_token" type="VARCHAR(255)"/>
+         <column name="secret" type="VARCHAR(255)"/>
+         <column name="user_id" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-9">
+      <createTable tableName="jhi_user">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="jhi_userPK"/>
+         </column>
+         <column name="created_by" type="VARCHAR(50)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="created_date" type="datetime">
+            <constraints nullable="false"/>
+         </column>
+         <column name="last_modified_by" type="VARCHAR(50)"/>
+         <column name="last_modified_date" type="datetime"/>
+         <column name="activated" type="BOOLEAN">
+            <constraints nullable="false"/>
+         </column>
+         <column name="activation_key" type="VARCHAR(20)"/>
+         <column name="email" type="VARCHAR(100)"/>
+         <column name="first_name" type="VARCHAR(50)"/>
+         <column name="lang_key" type="VARCHAR(5)"/>
+         <column name="last_name" type="VARCHAR(50)"/>
+         <column name="login" type="VARCHAR(100)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="password_hash" type="VARCHAR(60)"/>
+         <column name="reset_date" type="datetime"/>
+         <column name="reset_key" type="VARCHAR(20)"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-10">
+      <createTable tableName="jhi_user_authority">
+         <column name="user_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="authority_name" type="VARCHAR(50)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-11">
+      <createTable tableName="merchant">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="merchantPK"/>
+         </column>
+         <column name="description" type="VARCHAR(255)"/>
+         <column name="line_one_of_address" type="VARCHAR(255)"/>
+         <column name="line_two_of_address" type="VARCHAR(255)"/>
+         <column name="name" type="VARCHAR(255)"/>
+         <column name="postcode" type="VARCHAR(255)"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-12">
+      <createTable tableName="offer">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="offerPK"/>
+         </column>
+         <column name="discount" type="INT"/>
+         <column name="end_date" type="datetime"/>
+         <column name="start_date" type="datetime"/>
+         <column name="service_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-13">
+      <createTable tableName="photo">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="photoPK"/>
+         </column>
+         <column name="is_profile_photo" type="BOOLEAN"/>
+         <column name="location" type="VARCHAR(255)"/>
+         <column name="tag" type="VARCHAR(255)"/>
+         <column name="customer_id" type="BIGINT"/>
+         <column name="merchant_id" type="BIGINT"/>
+         <column name="review_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-14">
+      <createTable tableName="resource">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="resourcePK"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-15">
+      <createTable tableName="resources">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="resourcesPK"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-16">
+      <createTable tableName="review">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="reviewPK"/>
+         </column>
+         <column name="rating" type="INT"/>
+         <column name="review" type="VARCHAR(255)"/>
+         <column name="customer_id" type="BIGINT"/>
+         <column name="merchant_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-17">
+      <createTable tableName="service">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="servicePK"/>
+         </column>
+         <column name="description" type="VARCHAR(255)"/>
+         <column name="end_time" type="datetime"/>
+         <column name="friday_is_open" type="BOOLEAN"/>
+         <column name="monday_is_open" type="BOOLEAN"/>
+         <column name="name" type="VARCHAR(255)"/>
+         <column name="saturday_is_open" type="BOOLEAN"/>
+         <column name="service_type" type="VARCHAR(255)"/>
+         <column name="start_time" type="datetime"/>
+         <column name="sunday_is_open" type="BOOLEAN"/>
+         <column name="thursday_is_open" type="BOOLEAN"/>
+         <column name="tuesday_is_open" type="BOOLEAN"/>
+         <column name="wednesday_is_open" type="BOOLEAN"/>
+         <column name="merchant_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-18">
+      <createTable tableName="service_holiday">
+         <column name="services_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="holidays_id" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-19">
+      <addPrimaryKey columnNames="event_id, name" tableName="jhi_persistent_audit_evt_data"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-20">
+      <addPrimaryKey columnNames="user_id, authority_name" tableName="jhi_user_authority"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-21">
+      <addPrimaryKey columnNames="services_id, holidays_id" tableName="service_holiday"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-22">
+      <addPrimaryKey columnNames="name"
+                     constraintName="jhi_authorityPK"
+                     tableName="jhi_authority"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-23">
+      <addPrimaryKey columnNames="series"
+                     constraintName="jhi_persistent_tokenPK"
+                     tableName="jhi_persistent_token"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-24">
+      <addUniqueConstraint columnNames="email"
+                           constraintName="UC_JHI_USEREMAIL_COL"
+                           tableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-25">
+      <addUniqueConstraint columnNames="login"
+                           constraintName="UC_JHI_USERLOGIN_COL"
+                           tableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-26">
+      <addForeignKeyConstraint baseColumnNames="customer_id"
+                               baseTableName="photo"
+                               constraintName="FK_1ny8ot27u0ow0nbeohu9k3wsn"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-27">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="review"
+                               constraintName="FK_5qps42hs7nxv0dvp1yhifacx4"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-28">
+      <addForeignKeyConstraint baseColumnNames="customer_id"
+                               baseTableName="review"
+                               constraintName="FK_97g3lfg7arre2npww6ijf9lur"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-29">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="jhi_persistent_token"
+                               constraintName="FK_c2yetr6vr7nrqhjvi1rl24b3l"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-30">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="service"
+                               constraintName="FK_drai0fck8i33c8lwraiy3wxwi"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-31">
+      <addForeignKeyConstraint baseColumnNames="holidays_id"
+                               baseTableName="service_holiday"
+                               constraintName="FK_e2fya64pv78rxwbui3bin3rp5"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="holiday"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-32">
+      <addForeignKeyConstraint baseColumnNames="services_id"
+                               baseTableName="service_holiday"
+                               constraintName="FK_eamjvlcg5odreb3ym2qe1s9xd"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="service"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-33">
+      <addForeignKeyConstraint baseColumnNames="event_id"
+                               baseTableName="jhi_persistent_audit_evt_data"
+                               constraintName="FK_evb970jo5bi8aon8s65c0lyyn"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="event_id"
+                               referencedTableName="jhi_persistent_audit_event"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-34">
+      <addForeignKeyConstraint baseColumnNames="service_id"
+                               baseTableName="offer"
+                               constraintName="FK_gk9hvy5jc3wvfpnokbmu8xk3k"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="service"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-35">
+      <addForeignKeyConstraint baseColumnNames="authority_name"
+                               baseTableName="jhi_user_authority"
+                               constraintName="FK_ik5r332jlvpolfr7e5n7oi42l"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="name"
+                               referencedTableName="jhi_authority"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-36">
+      <addForeignKeyConstraint baseColumnNames="review_id"
+                               baseTableName="photo"
+                               constraintName="FK_jqig1fph75vog0orpov7ht0uw"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="review"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-37">
+      <addForeignKeyConstraint baseColumnNames="user_id"
+                               baseTableName="jhi_user_authority"
+                               constraintName="FK_pg0oaw6mr9pt3ibeihdc1jwof"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476288481612-38">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="photo"
+                               constraintName="FK_sxng85fnux9p3fys7bf4487w3"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,28 @@
+{
+    "test3App": {
+        "customer" : {
+            "home": {
+                "title": "Customers",
+                "createLabel": "Vytvořit Customer",
+                "createOrEditLabel": "Vytvořit nebo upravit Customer",
+                "search": "Vyhledat Customer"
+            },
+            "created": "Byl vytvořen potomek entity Customer s identifikátorem {{ param }}",
+            "updated": "Potomek entity Customer s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Customer s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Customer {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer"
+            },
+            "firstLineOfAddress": "First Line Of Address",
+            "secondLineOfAddress": "Second Line Of Address",
+            "contactNumber": "Contact Number",
+            "name": "Name",
+            "photo": "Photo",
+            "review": "Review",
+            "bookingItem": "Booking Item"
+        }
+    }
+}

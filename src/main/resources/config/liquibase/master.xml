@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113046_added_entity_Resource.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113454_added_entity_Holiday.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113743_added_entity_Offer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012114114_added_entity_Merchant.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012114613_added_entity_Employee.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012115623_added_entity_Service.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012120152_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012120258_added_entity_Review.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012120831_added_entity_Photo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012115131_added_entity_BookingItem.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20161012120831_added_entity_constraints_Photo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012122646_changelog.xml" relativeToChangelogFile="false"/>    
+   <include file="classpath:config/liquibase/changelog/20161012130346_changelog.xml" relativeToChangelogFile="false"/>
+   <include file="classpath:config/liquibase/changelog/20161012154044_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012160757_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113046_added_entity_constraints_Resource.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012115623_added_entity_constraints_Service.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012115131_added_entity_constraints_BookingItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012120152_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012210251_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012223951_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012232627_changelog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113454_added_entity_constraints_Holiday.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161012113743_added_entity_constraints_Offer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161013112120_changelog.xml" relativeToChangelogFile="false"/>
+
+    
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

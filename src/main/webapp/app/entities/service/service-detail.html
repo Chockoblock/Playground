@@ -1,0 +1,77 @@
+
+<div>
+    <h2><span data-translate="test3App.service.detail.title">Service</span> {{vm.service.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="test3App.service.mondayIsOpen">Monday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.mondayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.tuesdayIsOpen">Tuesday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.tuesdayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.wednesdayIsOpen">Wednesday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.wednesdayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.thursdayIsOpen">Thursday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.thursdayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.fridayIsOpen">Friday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.fridayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.saturdayIsOpen">Saturday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.saturdayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.sundayIsOpen">Sunday Is Open</span></dt>
+        <dd>
+            <span>{{vm.service.sundayIsOpen}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.name">Name</span></dt>
+        <dd>
+            <span>{{vm.service.name}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.description">Description</span></dt>
+        <dd>
+            <span>{{vm.service.description}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.serviceType">Service Type</span></dt>
+        <dd>
+            <span>{{vm.service.serviceType}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.startTime">Start Time</span></dt>
+        <dd>
+            <span>{{vm.service.startTime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.endTime">End Time</span></dt>
+        <dd>
+            <span>{{vm.service.endTime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.service.merchant">Merchant</span></dt>
+        <dd>
+            <a ui-sref="merchant-detail({id:vm.service.merchant.id})">{{vm.service.merchant.name}}</a>
+        </dd>
+        <dt><span data-translate="test3App.service.holiday">Holiday</span></dt>
+        <dd>
+            <span ng-repeat="holiday in vm.service.holidays">
+                <a ui-sref="holiday-detail({id: holiday.id})">{{holiday.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="service-detail.edit({id:vm.service.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

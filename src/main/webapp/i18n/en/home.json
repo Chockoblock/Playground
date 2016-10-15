@@ -1,0 +1,16 @@
+{
+    "home": {
+        "title": "<b>A cloud based booking platform, that promotes service improvement and integration, for any businesses or individual!!</b>",
+        "subtitle": "We provide intelligent booking, customer, sales and integration management that can be tailored for any sector.",
+        "logged": {
+            "message": "You are logged in as \"{{username}}\". Everyone at <b>Platform8</b> wish you a Great day!! If you have any questions dont hesitate to get in touch"
+        },
+        "question": "If you would like to see any of our Social Media then see the below",
+        "link": {
+            "homepage": "Platform8 on Facebook",
+            "follow": "follow @java_hipster on Twitter"
+        },
+        "like": "If you like JHipster, don't forget to give us a star on",
+        "github": "GitHub"
+    }
+}

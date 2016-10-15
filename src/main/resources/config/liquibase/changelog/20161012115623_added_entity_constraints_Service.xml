@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Service.
+    -->
+    <changeSet id="20161012115623-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="merchant_id"
+                                 baseTableName="service"
+                                 constraintName="fk_service_merchant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="merchant"/>
+
+        <addForeignKeyConstraint baseColumnNames="services_id"
+                                 baseTableName="service_holiday"
+                                 constraintName="fk_service_holiday_services_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service"/>
+        <addForeignKeyConstraint baseColumnNames="holidays_id"
+                                 baseTableName="service_holiday"
+                                 constraintName="fk_service_holiday_holidays_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="holiday"/>
+        
+    </changeSet>
+</databaseChangeLog>

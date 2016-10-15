@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="Martin (generated)" id="1476277432516-1">
+      <addColumn tableName="photo">
+         <column name="customer_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-2">
+      <addColumn tableName="photo">
+         <column name="merchant_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-3">
+      <addColumn tableName="review">
+         <column name="merchant_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-4">
+      <addColumn tableName="service">
+         <column name="merchant_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-5">
+      <addForeignKeyConstraint baseColumnNames="customer_id"
+                               baseTableName="photo"
+                               constraintName="FK_1ny8ot27u0ow0nbeohu9k3wsn"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-6">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="review"
+                               constraintName="FK_5qps42hs7nxv0dvp1yhifacx4"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-7">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="service"
+                               constraintName="FK_drai0fck8i33c8lwraiy3wxwi"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-8">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="photo"
+                               constraintName="FK_sxng85fnux9p3fys7bf4487w3"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-9">
+      <dropUniqueConstraint constraintName="user_id" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-10">
+      <dropUniqueConstraint constraintName="user_id_2" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476277432516-11">
+      <dropDefaultValue columnDataType="datetime"
+                        columnName="last_modified_date"
+                        tableName="jhi_user"/>
+   </changeSet>
+</databaseChangeLog>

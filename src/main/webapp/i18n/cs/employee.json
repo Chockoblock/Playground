@@ -1,0 +1,26 @@
+{
+    "test3App": {
+        "employee" : {
+            "home": {
+                "title": "Employees",
+                "createLabel": "Vytvořit Employee",
+                "createOrEditLabel": "Vytvořit nebo upravit Employee",
+                "search": "Vyhledat Employee"
+            },
+            "created": "Byl vytvořen potomek entity Employee s identifikátorem {{ param }}",
+            "updated": "Potomek entity Employee s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Employee s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Employee {{ id }}?"
+            },
+            "detail": {
+                "title": "Employee"
+            },
+            "email": "Email",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "resource": "Resource",
+            "holiday": "Holiday"
+        }
+    }
+}

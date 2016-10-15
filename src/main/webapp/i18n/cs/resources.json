@@ -1,0 +1,21 @@
+{
+    "test3App": {
+        "resources" : {
+            "home": {
+                "title": "Resources",
+                "createLabel": "Vytvořit Resources",
+                "createOrEditLabel": "Vytvořit nebo upravit Resources",
+                "search": "Vyhledat Resources"
+            },
+            "created": "Byl vytvořen potomek entity Resources s identifikátorem {{ param }}",
+            "updated": "Potomek entity Resources s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Resources s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Resources {{ id }}?"
+            },
+            "detail": {
+                "title": "Resources"
+            }
+        }
+    }
+}

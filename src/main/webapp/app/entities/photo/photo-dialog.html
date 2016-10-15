@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPhotoLabel" data-translate="test3App.photo.home.createOrEditLabel">Create or edit a Photo</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.photo.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.photo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.photo.location" for="field_location">Location</label>
+            <input type="text" class="form-control" name="location" id="field_location"
+                    ng-model="vm.photo.location"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.photo.isProfilePhoto" for="field_isProfilePhoto">Is Profile Photo</label>
+            <input type="checkbox" class="form-control" name="isProfilePhoto" id="field_isProfilePhoto"
+                    ng-model="vm.photo.isProfilePhoto"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.photo.tag" for="field_tag">Tag</label>
+            <input type="text" class="form-control" name="tag" id="field_tag"
+                    ng-model="vm.photo.tag"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="test3App.photo.review" for="field_review">Review</label>
+            <select class="form-control" id="field_review" name="review" ng-model="vm.photo.review" ng-options="review as review.id for review in vm.reviews track by review.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="test3App.photo.merchant" for="field_merchant">Merchant</label>
+            <select class="form-control" id="field_merchant" name="merchant" ng-model="vm.photo.merchant" ng-options="merchant as merchant.name for merchant in vm.merchants track by merchant.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="test3App.photo.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.photo.customer" ng-options="customer as customer.id for customer in vm.customers track by customer.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

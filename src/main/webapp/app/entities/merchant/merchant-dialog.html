@@ -1,0 +1,126 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMerchantLabel" data-translate="test3App.merchant.home.createOrEditLabel">Create or edit a Merchant</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.merchant.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.merchant.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.merchant.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="vm.merchant.name"
+                    required ng-minlength="2" ng-maxlength="20" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.merchant.lineOneOfAddress" for="field_lineOneOfAddress">Line One Of Address</label>
+            <input type="text" class="form-control" name="lineOneOfAddress" id="field_lineOneOfAddress"
+                    ng-model="vm.merchant.lineOneOfAddress"
+                    required ng-minlength="2" ng-maxlength="20" />
+            <div ng-show="editForm.lineOneOfAddress.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lineOneOfAddress.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.lineOneOfAddress.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.lineOneOfAddress.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.merchant.secondLineOfAddress" for="field_secondLineOfAddress">Second Line Of Address</label>
+            <input type="text" class="form-control" name="secondLineOfAddress" id="field_secondLineOfAddress"
+                    ng-model="vm.merchant.secondLineOfAddress"
+                    required ng-minlength="2" ng-maxlength="20" />
+            <div ng-show="editForm.secondLineOfAddress.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.secondLineOfAddress.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.secondLineOfAddress.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.secondLineOfAddress.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.merchant.postcode" for="field_postcode">Postcode</label>
+            <input type="text" class="form-control" name="postcode" id="field_postcode"
+                    ng-model="vm.merchant.postcode"
+                    required ng-minlength="2" ng-maxlength="7" />
+            <div ng-show="editForm.postcode.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.postcode.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.postcode.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.postcode.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="7">
+                    This field cannot be longer than 7 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="test3App.merchant.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.merchant.description"
+                    required ng-minlength="2" ng-maxlength="255" />
+            <div ng-show="editForm.description.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.description.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.minlength" data-translate="entity.validation.minlength" translate-value-min="2">
+                    This field is required to be at least 2 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.description.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="255">
+                    This field cannot be longer than 255 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

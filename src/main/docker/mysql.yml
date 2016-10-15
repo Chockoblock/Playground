@@ -1,0 +1,14 @@
+version: '2'
+services:
+    test3-mysql:
+        container_name: test3-mysql
+        image: mysql:5.7.13
+        # volumes:
+        #     - ~/volumes/jhipster/test3/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=test3
+        ports:
+            - 3306:3306
+        command: mysqld --lower_case_table_names=1 --skip-ssl

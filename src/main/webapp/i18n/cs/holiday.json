@@ -1,0 +1,26 @@
+{
+    "test3App": {
+        "holiday" : {
+            "home": {
+                "title": "Holidays",
+                "createLabel": "Vytvořit Holiday",
+                "createOrEditLabel": "Vytvořit nebo upravit Holiday",
+                "search": "Vyhledat Holiday"
+            },
+            "created": "Byl vytvořen potomek entity Holiday s identifikátorem {{ param }}",
+            "updated": "Potomek entity Holiday s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Holiday s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Holiday {{ id }}?"
+            },
+            "detail": {
+                "title": "Holiday"
+            },
+            "name": "Name",
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "service": "Service",
+            "employee": "Employee"
+        }
+    }
+}

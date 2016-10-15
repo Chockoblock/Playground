@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd"
+         name="CM1"
+         updateCheck="false"
+         maxBytesLocalHeap="16M">
+
+    <!--
+      This is a default configuration, it is re-configured by the CacheConfiguration Spring Bean, using the
+      properties from the resources/config/*.yml files.
+    -->
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <defaultCache
+            eternal="false"
+            overflowToDisk="false"
+            />
+
+    <cache name="com.mycompany.myapp.domain.User"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Authority"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.User.authorities"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.PersistentToken"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.User.persistentTokens"
+           timeToLiveSeconds="3600">
+    </cache>
+    
+
+    <cache name="com.mycompany.myapp.social.SocialUserConnection"
+           timeToLiveSeconds="3600">
+    </cache>
+
+    <cache name="com.mycompany.myapp.domain.Resource"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Holiday"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Offer"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Merchant"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Employee"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.BookingItem"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Service"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Customer"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Review"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Photo"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Review.photos"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Merchant.reviews"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Merchant.photos"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Merchant.services"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Customer.photos"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Resource.bookingItems"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Bookingitem"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Bookingitem.resources"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Resources"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Resource.employees"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Employee.resources"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Customer.reviews"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Holiday.services"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Service.holidays"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Service.offers"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Resource.bookingitems"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Service.resources"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.BookingItem.resources"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.BookingItem.bobs"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Customer.bookedItems"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Customer.bookingItems"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Employee.holidays"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Holiday.employees"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Merchant.es"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <cache name="com.mycompany.myapp.domain.Offer.as"
+                               timeToLiveSeconds="3600">
+                        </cache>
+                        
+    <!-- jhipster-needle-ehcache-add-entry -->
+</ehcache>

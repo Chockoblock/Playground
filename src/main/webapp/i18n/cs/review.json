@@ -1,0 +1,26 @@
+{
+    "test3App": {
+        "review" : {
+            "home": {
+                "title": "Reviews",
+                "createLabel": "Vytvořit Review",
+                "createOrEditLabel": "Vytvořit nebo upravit Review",
+                "search": "Vyhledat Review"
+            },
+            "created": "Byl vytvořen potomek entity Review s identifikátorem {{ param }}",
+            "updated": "Potomek entity Review s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Review s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Review {{ id }}?"
+            },
+            "detail": {
+                "title": "Review"
+            },
+            "review": "Review",
+            "rating": "Rating",
+            "photo": "Photo",
+            "merchant": "Merchant",
+            "customer": "Customer"
+        }
+    }
+}

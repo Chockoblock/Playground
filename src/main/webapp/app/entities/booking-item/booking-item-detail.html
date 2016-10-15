@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="test3App.bookingItem.detail.title">Booking Item</span> {{vm.bookingItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="test3App.bookingItem.price">Price</span></dt>
+        <dd>
+            <span>{{vm.bookingItem.price}}</span>
+        </dd>
+        <dt><span data-translate="test3App.bookingItem.serviceType">Service Type</span></dt>
+        <dd>
+            <span>{{vm.bookingItem.serviceType}}</span>
+        </dd>
+        <dt><span data-translate="test3App.bookingItem.startTime">Start Time</span></dt>
+        <dd>
+            <span>{{vm.bookingItem.startTime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.bookingItem.endTime">End Time</span></dt>
+        <dd>
+            <span>{{vm.bookingItem.endTime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.bookingItem.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.bookingItem.customer.id})">{{vm.bookingItem.customer.id}}</a>
+        </dd>
+        <dt><span data-translate="test3App.bookingItem.resource">Resource</span></dt>
+        <dd>
+            <a ui-sref="resource-detail({id:vm.bookingItem.resource.id})">{{vm.bookingItem.resource.name}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="booking-item-detail.edit({id:vm.bookingItem.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

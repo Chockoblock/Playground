@@ -1,0 +1,87 @@
+<div>
+    <h2 data-translate="test3App.bookingItem.home.title">Booking Items</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="booking-item.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="test3App.bookingItem.home.createLabel">
+                        Create new Booking Item
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'test3App.bookingItem.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="test3App.bookingItem.price">Price</span></th>
+                    <th><span data-translate="test3App.bookingItem.serviceType">Service Type</span></th>
+                    <th><span data-translate="test3App.bookingItem.startTime">Start Time</span></th>
+                    <th><span data-translate="test3App.bookingItem.endTime">End Time</span></th>
+                    <th><span data-translate="test3App.bookingItem.customer">Customer</span></th>
+                    <th><span data-translate="test3App.bookingItem.resource">Resource</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bookingItem in vm.bookingItems track by bookingItem.id">
+                    <td><a ui-sref="booking-item-detail({id:bookingItem.id})">{{bookingItem.id}}</a></td>
+                    <td>{{bookingItem.price}}</td>
+                    <td>{{bookingItem.serviceType}}</td>
+                    <td>{{bookingItem.startTime | date:'medium'}}</td>
+                    <td>{{bookingItem.endTime | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="customer-detail({id:bookingItem.customer.id})">{{bookingItem.customer.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="resource-detail({id:bookingItem.resource.id})">{{bookingItem.resource.name}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="booking-item-detail({id:bookingItem.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking-item.edit({id:bookingItem.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking-item.delete({id:bookingItem.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

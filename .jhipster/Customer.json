@@ -1,0 +1,72 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "photo",
+            "otherEntityName": "photo",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "customer"
+        },
+        {
+            "relationshipName": "review",
+            "otherEntityName": "review",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "customer"
+        },
+        {
+            "relationshipName": "bookingItem",
+            "otherEntityName": "bookingItem",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "customer"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "firstLineOfAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": "20"
+        },
+        {
+            "fieldName": "secondLineOfAddress",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "2",
+            "fieldValidateRulesMaxlength": "20"
+        },
+        {
+            "fieldName": "contactNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength",
+                "maxlength",
+                "pattern"
+            ],
+            "fieldValidateRulesMinlength": "11",
+            "fieldValidateRulesMaxlength": "15",
+            "fieldValidateRulesPattern": "[0-9]*$"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "2",
+            "fieldValidateRulesMaxlength": "20"
+        }
+    ],
+    "changelogDate": "20161012120152",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "customer",
+    "pagination": "no"
+}

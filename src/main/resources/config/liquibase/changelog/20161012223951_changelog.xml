@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="Martin (generated)" id="1476311998460-1">
+      <createTable tableName="resources">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="resourcesPK"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-2">
+      <addColumn tableName="holiday">
+         <column name="employee_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-3">
+      <addColumn tableName="customer">
+         <column name="name" type="varchar(255)"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-4">
+      <addColumn tableName="booking_item">
+         <column name="resource_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-5">
+      <addForeignKeyConstraint baseColumnNames="employees_id"
+                               baseTableName="resource_employee"
+                               constraintName="FK_16ywdxst7jikm8gs648gtjhu7"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="employee"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-6">
+      <addForeignKeyConstraint baseColumnNames="resource_id"
+                               baseTableName="booking_item"
+                               constraintName="FK_4cqpon1mdm9h46kyspcdhtdwk"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="resource"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-7">
+      <addForeignKeyConstraint baseColumnNames="employee_id"
+                               baseTableName="holiday"
+                               constraintName="FK_4ukpo4sc6rm97dul7q0rtbh3r"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="employee"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-8">
+      <addForeignKeyConstraint baseColumnNames="customer_id"
+                               baseTableName="booking_item"
+                               constraintName="FK_4xq7u5b7frvnokg4huvnv2nw3"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-9">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="review"
+                               constraintName="FK_5qps42hs7nxv0dvp1yhifacx4"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-10">
+      <addForeignKeyConstraint baseColumnNames="service_id"
+                               baseTableName="resource"
+                               constraintName="FK_7lbbwolg5lovebxhx9k70ikel"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="service"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-11">
+      <addForeignKeyConstraint baseColumnNames="customer_id"
+                               baseTableName="review"
+                               constraintName="FK_97g3lfg7arre2npww6ijf9lur"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-12">
+      <addForeignKeyConstraint baseColumnNames="merchant_id"
+                               baseTableName="service"
+                               constraintName="FK_drai0fck8i33c8lwraiy3wxwi"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="merchant"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-13">
+      <addForeignKeyConstraint baseColumnNames="holidays_id"
+                               baseTableName="service_holiday"
+                               constraintName="FK_e2fya64pv78rxwbui3bin3rp5"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="holiday"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-14">
+      <addForeignKeyConstraint baseColumnNames="services_id"
+                               baseTableName="service_holiday"
+                               constraintName="FK_eamjvlcg5odreb3ym2qe1s9xd"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="service"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-15">
+      <addForeignKeyConstraint baseColumnNames="service_id"
+                               baseTableName="offer"
+                               constraintName="FK_gk9hvy5jc3wvfpnokbmu8xk3k"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="service"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-16">
+      <addForeignKeyConstraint baseColumnNames="resources_id"
+                               baseTableName="resource_employee"
+                               constraintName="FK_gvu2xos8wlgif48xyc5rou586"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="resource"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-17">
+      <dropUniqueConstraint constraintName="user_id" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-18">
+      <dropUniqueConstraint constraintName="user_id_2" tableName="jhi_social_user_connection"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-19">
+      <dropTable tableName="booking_item_resource"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-20">
+      <dropTable tableName="resource_booking_item"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-21">
+      <dropColumn columnName="booking_item_id" tableName="customer"/>
+   </changeSet>
+   <changeSet author="Martin (generated)" id="1476311998460-22">
+      <dropDefaultValue columnDataType="datetime"
+                        columnName="last_modified_date"
+                        tableName="jhi_user"/>
+   </changeSet>
+</databaseChangeLog>

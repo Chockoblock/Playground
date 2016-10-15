@@ -1,0 +1,28 @@
+{
+    "test3App": {
+        "merchant" : {
+            "home": {
+                "title": "Merchants",
+                "createLabel": "Vytvořit Merchant",
+                "createOrEditLabel": "Vytvořit nebo upravit Merchant",
+                "search": "Vyhledat Merchant"
+            },
+            "created": "Byl vytvořen potomek entity Merchant s identifikátorem {{ param }}",
+            "updated": "Potomek entity Merchant s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Merchant s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Merchant {{ id }}?"
+            },
+            "detail": {
+                "title": "Merchant"
+            },
+            "name": "Name",
+            "lineOneOfAddress": "Line One Of Address",
+            "secondLineOfAddress": "Second Line Of Address",
+            "postcode": "Postcode",
+            "description": "Description",
+            "review": "Review",
+            "service": "Service"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "test3App": {
+        "offer" : {
+            "home": {
+                "title": "Offers",
+                "createLabel": "Vytvořit Offer",
+                "createOrEditLabel": "Vytvořit nebo upravit Offer",
+                "search": "Vyhledat Offer"
+            },
+            "created": "Byl vytvořen potomek entity Offer s identifikátorem {{ param }}",
+            "updated": "Potomek entity Offer s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Offer s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Offer {{ id }}?"
+            },
+            "detail": {
+                "title": "Offer"
+            },
+            "discount": "Discount",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "service": "Service"
+        }
+    }
+}

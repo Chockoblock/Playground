@@ -1,0 +1,27 @@
+{
+    "test3App": {
+        "photo" : {
+            "home": {
+                "title": "Photos",
+                "createLabel": "Vytvořit Photo",
+                "createOrEditLabel": "Vytvořit nebo upravit Photo",
+                "search": "Vyhledat Photo"
+            },
+            "created": "Byl vytvořen potomek entity Photo s identifikátorem {{ param }}",
+            "updated": "Potomek entity Photo s identifikátorem {{ param }} byl upravený.",
+            "deleted": "Potomek entity Photo s identifikátorem {{ param }} bol smazaný.",
+            "delete": {
+                "question": "Jste si jisti, že chcete smazat Photo {{ id }}?"
+            },
+            "detail": {
+                "title": "Photo"
+            },
+            "location": "Location",
+            "isProfilePhoto": "Is Profile Photo",
+            "tag": "Tag",
+            "review": "Review",
+            "merchant": "Merchant",
+            "customer": "Customer"
+        }
+    }
+}

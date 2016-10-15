@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="test3App.offer.detail.title">Offer</span> {{vm.offer.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="test3App.offer.discount">Discount</span></dt>
+        <dd>
+            <span>{{vm.offer.discount}}</span>
+        </dd>
+        <dt><span data-translate="test3App.offer.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.offer.startDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.offer.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.offer.endDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="test3App.offer.service">Service</span></dt>
+        <dd>
+            <a ui-sref="service-detail({id:vm.offer.service.id})">{{vm.offer.service.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="offer-detail.edit({id:vm.offer.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
